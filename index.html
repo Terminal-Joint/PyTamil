@@ -436,6 +436,7 @@
       overflow: hidden;
     }
 
+    /* VERTICAL TRACK (TOP-TO-BOTTOM) */
     .carousel-track {
       display: flex;
       flex-direction: column;
@@ -443,7 +444,7 @@
       scroll-behavior: smooth;
       overflow-y: auto;
       overflow-x: hidden;
-      scroll-snap-type: y mandatory;
+      snap-type: y mandatory;
       scrollbar-width: none;
     }
 
@@ -452,20 +453,23 @@
     }
 
     .carousel-slide {
-      flex: 0 0 0%;
+      flex: 0 0 100%;
       width: 100%;
       height: 100%;
-      scroll-snap-align: start;
+      snap-align: start;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #ffffff;
+      padding: 0px;
     }
 
     .carousel-slide img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
+      border-radius: 0px;
+      border: 0px solid var(--border-color);
     }
 
     .slide-btn {
